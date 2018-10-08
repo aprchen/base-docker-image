@@ -11,4 +11,4 @@ RUN set -xe \
 
 COPY ./entrypoint.sh /usr/local/bin/
 
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["sh entrypoint.sh"]
