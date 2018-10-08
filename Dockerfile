@@ -9,6 +9,6 @@ RUN set -xe \
  && echo "${TIME_ZONE}" > /etc/timezone \
  && ln -sf /usr/share/zoneinfo/${TIME_ZONE} /etc/localtime
 
-COPY ./entrypoint.sh /entrypoint.sh
+ADD ./entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ["sh /entrypoint.sh"]
+ENTRYPOINT "/entrypoint.sh"
